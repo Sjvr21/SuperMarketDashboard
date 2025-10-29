@@ -1,0 +1,91 @@
+/* ============================
+   📊 Analytics Dashboard Styles
+   ============================ */
+
+   body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8fafc;
+    color: #1e293b;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 2rem;
+    margin: 30px 0 20px;
+    text-align: center;
+    color: #0f172a;
+}
+
+h2 {
+    font-size: 1.25rem;
+    color: #334155;
+    margin: 30px 0 10px;
+    border-left: 4px solid #3b82f6;
+    padding-left: 10px;
+}
+
+.dashboard {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+
+th, td {
+    text-align: left;
+    padding: 12px 16px;
+}
+
+th {
+    background-color: #f1f5f9;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    color: #475569;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+td {
+    border-bottom: 1px solid #e2e8f0;
+    font-size: 0.95rem;
+}
+
+tr:hover {
+    background-color: #f9fafb;
+}
+
+td[style*="color:red"] {
+    color: #dc2626 !important;
+    font-weight: 600;
+}
+
+.section-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px 25px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 25px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.section-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    text-align: center;
+    color: #94a3b8;
+    font-size: 0.85rem;
+    padding: 15px 0 30px;
+}

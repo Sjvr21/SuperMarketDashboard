@@ -1,0 +1,423 @@
+/* =====================================================
+   🌟 SUPERMARKET DASHBOARD — PROFESSIONAL STYLE
+   ===================================================== */
+
+/* ---------- GLOBAL RESET ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", "Segoe UI", Roboto, sans-serif;
+}
+
+html, body {
+    background-color: #f5f6fa;
+    color: #1e293b;
+    line-height: 1.6;
+    height: 100%;
+}
+
+/* ---------- NAVIGATION ---------- */
+nav {
+    background-color: #1e3a8a;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 36px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav h1 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    padding: 8px 10px;
+    border-radius: 6px;
+    transition: background 0.2s ease;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* ---------- LAYOUT ---------- */
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* ---------- HEADINGS ---------- */
+h1, h2, h3 {
+    color: #1e293b;
+    margin-bottom: 16px;
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 1.8rem;
+}
+
+h2 {
+    font-size: 1.3rem;
+}
+
+/* ---------- TABLES ---------- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+th, td {
+    text-align: left;
+    padding: 14px 16px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+th {
+    background-color: #f1f5f9;
+    color: #475569;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+tr:hover td {
+    background-color: #f9fafb;
+}
+
+td {
+    font-size: 0.95rem;
+}
+
+/* Zebra alternate rows */
+tr:nth-child(even) td {
+    background-color: #fafafa;
+}
+
+/* ---------- FORMS ---------- */
+form {
+    background-color: white;
+    padding: 32px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    max-width: 500px;
+    margin: 0 auto 40px;
+}
+
+form h2 {
+    text-align: center;
+    margin-bottom: 24px;
+    color: #1e293b;
+}
+
+label {
+    display: block;
+    font-weight: 500;
+    color: #334155;
+    margin-bottom: 6px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="number"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+    margin-bottom: 18px;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+    outline: none;
+}
+
+/* Align form buttons */
+form .actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+/* ---------- BUTTONS ---------- */
+button, input[type="submit"], .btn {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 16px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+button:hover, input[type="submit"]:hover, .btn:hover {
+    background-color: #1e40af;
+    transform: translateY(-1px);
+}
+
+.btn-danger {
+    background-color: #dc2626;
+}
+
+.btn-danger:hover {
+    background-color: #b91c1c;
+}
+
+.btn-secondary {
+    background-color: #64748b;
+}
+
+.btn-secondary:hover {
+    background-color: #475569;
+}
+
+/* ---------- MESSAGE / ALERTS ---------- */
+.message {
+    text-align: center;
+    background-color: #e0f2fe;
+    color: #0369a1;
+    border: 1px solid #bae6fd;
+    border-radius: 8px;
+    padding: 10px 16px;
+    margin: 20px auto;
+    max-width: 600px;
+    font-weight: 500;
+}
+
+.message.error {
+    background-color: #fee2e2;
+    color: #b91c1c;
+    border-color: #fecaca;
+}
+
+.message.success {
+    background-color: #dcfce7;
+    color: #166534;
+    border-color: #bbf7d0;
+}
+
+/* ---------- CARDS ---------- */
+.section-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 24px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.section-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+.section-card h2 {
+    border-left: 4px solid #3b82f6;
+    padding-left: 10px;
+    color: #334155;
+}
+
+/* ---------- STATUS TAGS ---------- */
+.status {
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.status.pending {
+    background-color: #fef9c3;
+    color: #92400e;
+}
+
+.status.delivered {
+    background-color: #dcfce7;
+    color: #166534;
+}
+
+.status.cancelled {
+    background-color: #fee2e2;
+    color: #b91c1c;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+    text-align: center;
+    color: #94a3b8;
+    font-size: 0.9rem;
+    margin-top: 60px;
+    padding: 20px;
+}
+
+/* =====================================================
+   🧭 AUTH & USER MANAGEMENT FORMS
+   ===================================================== */
+
+/* Center the form vertically on screen */
+.auth-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+/* Shared login/register form style */
+.auth-form {
+    background-color: white;
+    padding: 40px 36px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.4s ease;
+}
+
+.auth-form h2 {
+    text-align: center;
+    color: #1e293b;
+    margin-bottom: 24px;
+    font-size: 1.4rem;
+}
+
+.auth-form label {
+    display: block;
+    font-weight: 500;
+    color: #475569;
+    margin-bottom: 6px;
+}
+
+.auth-form input[type="text"],
+.auth-form input[type="password"],
+.auth-form select {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 6px;
+    border: 1px solid #cbd5e1;
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.auth-form input:focus,
+.auth-form select:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+    outline: none;
+}
+
+/* Align submit button */
+.auth-form .actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+}
+
+.auth-form input[type="submit"],
+.auth-form button {
+    width: 100%;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 0;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.auth-form input[type="submit"]:hover,
+.auth-form button:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-1px);
+}
+
+/* Little message below forms */
+.auth-form .note {
+    margin-top: 12px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #64748b;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* =======================================
+   📄 Pagination Controls
+   ======================================= */
+   .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 24px;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.page-btn {
+    padding: 8px 14px;
+    background-color: #e2e8f0;
+    color: #334155;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.page-btn:hover {
+    background-color: #2563eb;
+    color: #fff;
+}
+
+.page-btn.active {
+    background-color: #2563eb;
+    color: #fff;
+    pointer-events: none;
+}
+
+.page-btn.disabled {
+    background-color: #cbd5e1;
+    color: #64748b;
+    pointer-events: none;
+}
+
+
