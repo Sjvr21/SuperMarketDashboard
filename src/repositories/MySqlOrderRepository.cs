@@ -100,6 +100,7 @@ public class MySqlOrderRepository
                 Username = reader.GetString(reader.GetOrdinal("username")),
                 TotalPrice = reader.GetDecimal(reader.GetOrdinal("total_price")),
                 Shipping = reader.GetDecimal(reader.GetOrdinal("shipping")),
+                Status = reader.GetString(reader.GetOrdinal("status")),
                 ArrivalDate = reader.GetDateTime(reader.GetOrdinal("arrival_date")),
                 CreatedAt = reader.GetDateTime(reader.GetOrdinal("created_at"))
             });
@@ -148,7 +149,7 @@ public class MySqlOrderRepository
         foreach (var item in items)
         {
             using var cmd = dbc.CreateCommand();
-            cmd.CommandText = "UPDATE warehouse_items SET quantity = quantity - @q WHERE id = @id";
+            cmd.CommandText = "UPDATE warehouse_items SET stock = stock - @q WHERE id = @id";
             cmd.Parameters.AddWithValue("@q", item.Quantity);
             cmd.Parameters.AddWithValue("@id", item.ItemId);
             await cmd.ExecuteNonQueryAsync();
